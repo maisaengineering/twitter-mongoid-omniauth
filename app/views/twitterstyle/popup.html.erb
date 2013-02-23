@@ -1,0 +1,65 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#alertMe').on('click', function(){
+            alert("You are in an alert triggered by alert() javascript function");
+        });
+        $('#alertBrowser').on('click', function(){
+            _originalAlert("You are in an alert triggered by original alert() javascript function");
+        });
+    });
+</script>
+
+<style type="text/css">
+    body {
+        text-align: center;
+    }
+    #windowAlertModal .modal-footer {
+        text-align: center;
+    }
+</style>
+<button class="btn btn-large btn-primary" id="alertMe">Click me for an Alert</button>
+<br />
+<br />
+<button class="btn btn-large btn-primary" id="alertBrowser">Click me for a Browser Alert</button>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<!-- simple form -->
+<a href=" #" class="open-dialog" closeOnEscape="false" closeOnOverlayClick="false" showCloseHandle="false" rel="sample1-dialog">simple alert</a>
+
+<!-- which is equivalent to the following JavaScript snippet -->
+<script type="text/javascript">
+
+
+        $(".open-dialog").click(function(event) {
+            event.preventDefault();
+            $("#sample1-dialog").dialog2("open");
+        });
+
+</script>
+<div id="sample1-dialog" style="display: none">
+  <h1>Simple alert</h1>
+  <p>
+    It is always beneficial to acknowledge alerts of any kind.
+    You can close this alert if you agree.
+    (Note: Normally a dialog box is not that penetrating)
+  </p>
+  <div class="form-actions">
+    <button class="btn-primary close-dialog">Understood</button>
+    <button class="btn-danger" onclick="alert('You might reconsider your click behaviour!')">I don't care</button>
+  </div>
+</div>
+<!-- simple form closes -->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
